@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        /*style.css*/
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            line-height: 1.5;
+            min-height: 100vh;
+            background: #f3f3f3;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .main {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            transition: transform 0.2s;
+            width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        button {
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            background-color: #4CAF50;
+            width: 100px;
+            font-size: 16px;
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <h1>My-Blog Project</h1>
+        <div class="wrap">
+            <button type="submit" onclick="solve()">
+                <a href="/login" style="text-decoration: none;">
+                    Login
+                </a></button>
+        </div>
+        <div class="wrap">
+            <button type="submit" onclick="solve()" style="width: 45%;">
+                <a href="/signup" style="text-decoration: none;">
+                    Create an account
+                </a></button>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+<!-- <div class="form-container">
+
+    <a href="/login" style="margin-right:44px;">Login</a>
+    <a href="/signup">SignUp</a>
+
+</div> -->
