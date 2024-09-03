@@ -24,8 +24,9 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             padding: 10px 20px;
             transition: transform 0.2s;
-            width: 500px;
+            width: 300px;
             text-align: center;
+            margin-left: 500px;
         }
 
         h1 {
@@ -71,11 +72,17 @@
             justify-content: center;
             align-items: center;
         }
+
+        .bg {
+            background: url(https://static.vecteezy.com/system/resources/previews/007/164/537/non_2x/fingerprint-identity-sensor-data-protection-system-podium-hologram-blue-light-and-concept-free-vector.jpg);
+            /* background-repeat: no-repeat; */
+            background-size: 100% 100%;
+        }
     </style>
 
 </head>
 
-<body>
+<body class="bg">
     <div class="main">
         <h1>Login Form</h1>
         <form action="/login" method="post">
@@ -98,23 +105,3 @@
 </body>
 
 </html>
-
-
-
-<!-- <div class="form-container">
-    <h2>Login</h2>
-    <form action="/login" method="post" >
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your Email" required
-                autocomplete="off">
-        </div>
-        <div class="form-group">
-            <label for="password">password:</label>
-            <input type="password" id="password" name="password" placeholder="password" required>
-        </div>
-        <button type="submit" class="submit-btn" onclick="">Login</button>
-    </form>
-    <p>Don't have an account? <a class="link" href="/signup">SignUp</a></p>
-    <div class="circle circle-two"></div>
-</div> -->

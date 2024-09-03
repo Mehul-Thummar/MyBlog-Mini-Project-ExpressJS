@@ -5,133 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
+        /*style.css*/
         body {
-            font-family: courier;
-            margin: 0 auto;
-            padding: 0;
-            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            line-height: 1.5;
+            min-height: 100vh;
+            background: #f3f3f3;
+            flex-direction: column;
+            margin: 0;
         }
 
-        .left {
-            left: 25px;
-        }
-
-        .right {
-            right: 25px;
-        }
-
-        .center {
+        .main {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            transition: transform 0.2s;
+            width: 500px;
             text-align: center;
         }
 
-        .bottom {
-            position: absolute;
-            bottom: 25px;
-        }
-
-        #gradient {
-            background: #999955;
-            background-image: linear-gradient(#DAB046 20%, #D73B25 20%, #D73B25 40%, #C71B25 40%, #C71B25 60%, #961A39 60%, #961A39 80%, #601035 80%);
-            margin: 0 auto;
-            margin-top: 100px;
-            width: 100%;
-            height: 150px;
-        }
-
-        #gradient:after {
-            content: "";
-            position: absolute;
-            background: #E9E2D0;
-            left: 50%;
-            margin-top: -67.5px;
-            margin-left: -270px;
-            padding-left: 20px;
-            border-radius: 5px;
-            width: 520px;
-            height: 275px;
-            z-index: -1;
-        }
-
-        #card {
-            position: absolute;
-            width: 450px;
-            height: 225px;
-            padding: 25px;
-            padding-top: 0;
-            padding-bottom: 0;
-            left: 50%;
-            top: 67.5px;
-            margin-left: -250px;
-            background: #E9E2D0;
-            box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
-            z-index: 5;
-        }
-
         h1 {
-            font-family: courier;
-            color: #333;
-            margin: 0 auto;
-            padding: 0;
-            font-size: 25pt;
+            color: #4CAF50;
         }
 
-        #card img {
-            width: 150px;
-            float: left;
-            border-radius: 5px;
-            margin-right: 20px;
-            -webkit-filter: sepia(1);
-            -moz-filter: sepia(1);
-            filter: sepia(1);
+        button {
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            background-color: #4CAF50;
+            width: 100px;
+            font-size: 16px;
         }
 
-        #card h2 {
-            font-family: courier;
-            color: #333;
-            margin: 0 auto;
-            padding: 0;
-            font-size: 15pt;
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        #card p {
-            font-family: courier;
-            color: #555;
-            font-size: 13px;
+        a {
+            color: black;
+            font-size: 10px;
+            font-weight: bold;
         }
 
-        #card span {
-            font-family: courier;
+        .bg {
+            background: url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-54588.jpg?w=740&t=st=1725359255~exp=1725359855~hmac=2b50a38cb9d8488fd44f432bd9bc21f0027e5c255bbd6bc30a5a07f5e33bc8a9);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
         }
     </style>
 </head>
 
-<body>
-
-    <div id="gradient"></div>
-    <div id="card">
-        <h1 style="text-align: center; margin-top: 20px;">Login User Info.</h1>
-        <div style="display: flex;  margin-top: 50px;">
-            <h2>User Name :</h2>
-            <h2>
+<body class="bg">
+    <div class="main">
+        <h1>User Profile</h1>
+        <div class="wrap">
+            <h2 style="margin-right: 10px; color: rgb(233, 36, 233);">User Name :</h2>
+            <h2 style="color: rgb(74, 14, 74);">
                 <%= user.fullName %>
             </h2>
         </div>
-        <div style="display: flex; margin-top: 30px;">
-            <h2>Email :</h2>
-            <h2>
+        <div class="wrap">
+            <h2 style="margin-right: 10px; color: rgb(233, 36, 233);">Email :</h2>
+            <h2 style="color:  rgb(74, 14, 74);">
                 <%= user.email %>
             </h2>
         </div>
         <div style="display: flex; float: right; margin-top: 15px; ">
-            <a style="text-decoration: none; padding: 5px; " href="/todo/alltodo">Back</a>
+            <a style="text-decoration: none;padding: 5px; " href="/blog/allblog">Back</a>
         </div>
     </div>
-
-
-
-
-
 </body>
 
 </html>

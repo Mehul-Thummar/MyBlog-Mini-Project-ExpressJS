@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const cookie = require('cookie-parser');
 
 const userRoutes = require("./routes/user.routes");
-const todoRoutes = require("./routes/todo.routes");
+const blogRoutes = require("./routes/blog.routes");
 const cors = require('cors');
 const ejs = require('ejs');
 
@@ -26,7 +26,7 @@ server.get("/", (req, res) => {
 
 
 server.use("/", userRoutes);
-server.use("/todo", todoRoutes);
+server.use("/blog", blogRoutes);
 
 server.listen(8001, () => {
 
